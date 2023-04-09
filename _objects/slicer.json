@@ -1,0 +1,760 @@
+"slicer": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "*": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/definitions/commonCards"
+                },
+                {
+                    "properties": {
+                        "*": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "responsive": {
+                                        "type": "boolean",
+                                        "title": "Responsive",
+                                        "description": "The visual will adapt to size changes"
+                                    },
+                                    "formatString": {
+                                        "type": "string"
+                                    },
+                                    "outlineColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Outline color",
+                                        "description": "Color of the outline"
+                                    },
+                                    "outlineWeight": {
+                                        "type": "number",
+                                        "title": "Outline weight",
+                                        "description": "Thickness of the outline in pixels"
+                                    },
+                                    "orientation": {
+                                        "type": "integer",
+                                        "enum": [
+                                            0,
+                                            1
+                                        ],
+                                        "title": "Orientation"
+                                    },
+                                    "count": {
+                                        "type": "integer"
+                                    },
+                                    "selfFilterEnabled": {
+                                        "type": "boolean"
+                                    },
+                                    "startDate": {
+                                        "type": "string"
+                                    },
+                                    "endDate": {
+                                        "type": "string"
+                                    },
+                                    "numericStart": {
+                                        "type": "number"
+                                    },
+                                    "numericEnd": {
+                                        "type": "number"
+                                    },
+                                    "relativeRange": {
+                                        "type": "string",
+                                        "enum": [
+                                            "Last",
+                                            "Next",
+                                            "This"
+                                        ]
+                                    },
+                                    "relativePeriod": {
+                                        "type": "string",
+                                        "enum": [
+                                            "None",
+                                            "Days",
+                                            "Weeks",
+                                            "Calendar Weeks",
+                                            "Months",
+                                            "Calendar Months",
+                                            "Years",
+                                            "Calendar Years"
+                                        ]
+                                    },
+                                    "relativeTimePeriod": {
+                                        "type": "string",
+                                        "enum": [
+                                            "None",
+                                            "Minutes",
+                                            "Hours"
+                                        ]
+                                    },
+                                    "relativeDuration": {
+                                        "type": "number"
+                                    },
+                                    "mode": {
+                                        "type": "string",
+                                        "enum": [
+                                            "VerticalList",
+                                            "HorizontalList",
+                                            "Between",
+                                            "Before",
+                                            "After",
+                                            "Basic",
+                                            "Dropdown",
+                                            "Relative",
+                                            "Single",
+                                            "RelativeTime"
+                                        ],
+                                        "title": "Style"
+                                    },
+                                    "isInvertedSelectionMode": {
+                                        "type": "boolean"
+                                    },
+                                    "selectAllCheckboxEnabled": {
+                                        "type": "boolean",
+                                        "title": "Show \"Select all\" option",
+                                        "description": "Show \"Select all\" as an option in the slicer. This selects all the values in the slicer so you can unselect them one by one to create an \"is not\" type filter."
+                                    },
+                                    "singleSelect": {
+                                        "type": "boolean",
+                                        "title": "Multi-select with CTRL",
+                                        "description": "Allow multiple selections in check boxes only when CTRL or Command + click is used"
+                                    },
+                                    "strictSingleSelect": {
+                                        "type": "boolean",
+                                        "title": "Single select",
+                                        "description": "Show slicer items with radio buttons"
+                                    },
+                                    "show": {
+                                        "type": "boolean",
+                                        "title": "Show"
+                                    },
+                                    "fontColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Font color"
+                                    },
+                                    "text": {
+                                        "type": "string",
+                                        "title": "Title text",
+                                        "description": "The name of the visual"
+                                    },
+                                    "background": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Background color"
+                                    },
+                                    "outline": {
+                                        "type": "string",
+                                        "enum": [
+                                            "None",
+                                            "BottomOnly",
+                                            "TopOnly",
+                                            "LeftOnly",
+                                            "RightOnly",
+                                            "TopBottom",
+                                            "LeftRight",
+                                            "Frame"
+                                        ],
+                                        "title": "Outline"
+                                    },
+                                    "outlineStyle": {
+                                        "type": "integer",
+                                        "title": "Outline"
+                                    },
+                                    "textSize": {
+                                        "type": "number",
+                                        "title": "Text size"
+                                    },
+                                    "bold": {
+                                        "type": "boolean",
+                                        "title": "Bold"
+                                    },
+                                    "italic": {
+                                        "type": "boolean",
+                                        "title": "Italic"
+                                    },
+                                    "underline": {
+                                        "type": "boolean",
+                                        "title": "Underline"
+                                    },
+                                    "fontFamily": {
+                                        "type": "string",
+                                        "title": "Font family"
+                                    },
+                                    "showRestatement": {
+                                        "type": "boolean",
+                                        "title": "Show summary"
+                                    },
+                                    "color": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Color"
+                                    },
+                                    "transparency": {
+                                        "type": "number",
+                                        "title": "Transparency",
+                                        "description": "Background color transparency"
+                                    },
+                                    "position": {
+                                        "type": "string",
+                                        "enum": [
+                                            "custom",
+                                            "left",
+                                            "right",
+                                            "above",
+                                            "below"
+                                        ],
+                                        "title": "Position"
+                                    },
+                                    "size": {
+                                        "type": "number",
+                                        "title": "Size"
+                                    },
+                                    "showTooltip": {
+                                        "type": "boolean",
+                                        "title": "Show tooltip"
+                                    },
+                                    "tooltipText": {
+                                        "type": "string",
+                                        "title": "Tooltip text"
+                                    },
+                                    "borderColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Outline color",
+                                        "description": "Color of the outline"
+                                    },
+                                    "expandCollapseToggleType": {
+                                        "type": "integer",
+                                        "enum": [
+                                            0,
+                                            1,
+                                            2
+                                        ],
+                                        "title": "Expand/collapse icon"
+                                    },
+                                    "steppedLayoutIndentation": {
+                                        "type": "number",
+                                        "title": "Stepped layout indentation"
+                                    },
+                                    "padding": {
+                                        "type": "number",
+                                        "title": "Padding"
+                                    },
+                                    "accessibilityContrastProperties": {
+                                        "type": "boolean"
+                                    },
+                                    "hideDatePickerButton": {
+                                        "type": "boolean"
+                                    },
+                                    "handleFillColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Fill"
+                                    },
+                                    "handleBorderColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Border"
+                                    },
+                                    "secondaryLineColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Color"
+                                    },
+                                    "includeToday": {
+                                        "type": "boolean",
+                                        "title": "Include today"
+                                    },
+                                    "anchorDate": {
+                                        "type": "string",
+                                        "title": "Anchor date",
+                                        "description": "Select a date to reference when filtering visuals by a relative range of time. If an anchor date isn't specified, we'll use the current date."
+                                    }
+                                }
+                            }
+                        },
+                        "general": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "responsive": {
+                                        "type": "boolean",
+                                        "title": "Responsive",
+                                        "description": "The visual will adapt to size changes"
+                                    },
+                                    "formatString": {
+                                        "type": "string"
+                                    },
+                                    "outlineColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Outline color",
+                                        "description": "Color of the outline"
+                                    },
+                                    "outlineWeight": {
+                                        "type": "number",
+                                        "title": "Outline weight",
+                                        "description": "Thickness of the outline in pixels"
+                                    },
+                                    "orientation": {
+                                        "type": "integer",
+                                        "enum": [
+                                            0,
+                                            1
+                                        ],
+                                        "title": "Orientation"
+                                    },
+                                    "count": {
+                                        "type": "integer"
+                                    },
+                                    "selfFilterEnabled": {
+                                        "type": "boolean"
+                                    }
+                                }
+                            },
+                            "title": "General"
+                        },
+                        "data": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "startDate": {
+                                        "type": "string"
+                                    },
+                                    "endDate": {
+                                        "type": "string"
+                                    },
+                                    "numericStart": {
+                                        "type": "number"
+                                    },
+                                    "numericEnd": {
+                                        "type": "number"
+                                    },
+                                    "relativeRange": {
+                                        "type": "string",
+                                        "enum": [
+                                            "Last",
+                                            "Next",
+                                            "This"
+                                        ]
+                                    },
+                                    "relativePeriod": {
+                                        "type": "string",
+                                        "enum": [
+                                            "None",
+                                            "Days",
+                                            "Weeks",
+                                            "Calendar Weeks",
+                                            "Months",
+                                            "Calendar Months",
+                                            "Years",
+                                            "Calendar Years"
+                                        ]
+                                    },
+                                    "relativeTimePeriod": {
+                                        "type": "string",
+                                        "enum": [
+                                            "None",
+                                            "Minutes",
+                                            "Hours"
+                                        ]
+                                    },
+                                    "relativeDuration": {
+                                        "type": "number"
+                                    },
+                                    "mode": {
+                                        "type": "string",
+                                        "enum": [
+                                            "VerticalList",
+                                            "HorizontalList",
+                                            "Between",
+                                            "Before",
+                                            "After",
+                                            "Basic",
+                                            "Dropdown",
+                                            "Relative",
+                                            "Single",
+                                            "RelativeTime"
+                                        ],
+                                        "title": "Style"
+                                    },
+                                    "isInvertedSelectionMode": {
+                                        "type": "boolean"
+                                    }
+                                }
+                            }
+                        },
+                        "selection": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "selectAllCheckboxEnabled": {
+                                        "type": "boolean",
+                                        "title": "Show \"Select all\" option",
+                                        "description": "Show \"Select all\" as an option in the slicer. This selects all the values in the slicer so you can unselect them one by one to create an \"is not\" type filter."
+                                    },
+                                    "singleSelect": {
+                                        "type": "boolean",
+                                        "title": "Multi-select with CTRL",
+                                        "description": "Allow multiple selections in check boxes only when CTRL or Command + click is used"
+                                    },
+                                    "strictSingleSelect": {
+                                        "type": "boolean",
+                                        "title": "Single select",
+                                        "description": "Show slicer items with radio buttons"
+                                    }
+                                }
+                            },
+                            "title": "Selection controls"
+                        },
+                        "header": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "show": {
+                                        "type": "boolean",
+                                        "title": "Show"
+                                    },
+                                    "fontColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Font color"
+                                    },
+                                    "text": {
+                                        "type": "string",
+                                        "title": "Title text",
+                                        "description": "The name of the visual"
+                                    },
+                                    "background": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Background color"
+                                    },
+                                    "outline": {
+                                        "type": "string",
+                                        "enum": [
+                                            "None",
+                                            "BottomOnly",
+                                            "TopOnly",
+                                            "LeftOnly",
+                                            "RightOnly",
+                                            "TopBottom",
+                                            "LeftRight",
+                                            "Frame"
+                                        ],
+                                        "title": "Outline"
+                                    },
+                                    "outlineStyle": {
+                                        "type": "integer",
+                                        "title": "Outline"
+                                    },
+                                    "textSize": {
+                                        "type": "number",
+                                        "title": "Text size"
+                                    },
+                                    "bold": {
+                                        "type": "boolean",
+                                        "title": "Bold"
+                                    },
+                                    "italic": {
+                                        "type": "boolean",
+                                        "title": "Italic"
+                                    },
+                                    "underline": {
+                                        "type": "boolean",
+                                        "title": "Underline"
+                                    },
+                                    "fontFamily": {
+                                        "type": "string",
+                                        "title": "Font family"
+                                    },
+                                    "showRestatement": {
+                                        "type": "boolean",
+                                        "title": "Show summary"
+                                    }
+                                }
+                            },
+                            "title": "Slicer header"
+                        },
+                        "pendingChangesIcon": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "show": {
+                                        "type": "boolean",
+                                        "title": "Show"
+                                    },
+                                    "color": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Color"
+                                    },
+                                    "transparency": {
+                                        "type": "number",
+                                        "title": "Transparency",
+                                        "description": "Background color transparency"
+                                    },
+                                    "position": {
+                                        "type": "string",
+                                        "enum": [
+                                            "custom",
+                                            "left",
+                                            "right",
+                                            "above",
+                                            "below"
+                                        ],
+                                        "title": "Position"
+                                    },
+                                    "size": {
+                                        "type": "number",
+                                        "title": "Size"
+                                    },
+                                    "showTooltip": {
+                                        "type": "boolean",
+                                        "title": "Show tooltip"
+                                    },
+                                    "tooltipText": {
+                                        "type": "string",
+                                        "title": "Tooltip text"
+                                    }
+                                }
+                            },
+                            "title": "Pending icon"
+                        },
+                        "searchBox": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "outline": {
+                                        "type": "string",
+                                        "enum": [
+                                            "None",
+                                            "BottomOnly",
+                                            "TopOnly",
+                                            "LeftOnly",
+                                            "RightOnly",
+                                            "TopBottom",
+                                            "LeftRight",
+                                            "Frame"
+                                        ],
+                                        "title": "Outline"
+                                    },
+                                    "outlineStyle": {
+                                        "type": "integer",
+                                        "title": "Outline"
+                                    },
+                                    "borderColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Outline color",
+                                        "description": "Color of the outline"
+                                    },
+                                    "background": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Background"
+                                    }
+                                }
+                            },
+                            "title": "Search box"
+                        },
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "fontColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Font color"
+                                    },
+                                    "background": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Background color"
+                                    },
+                                    "outline": {
+                                        "type": "string",
+                                        "enum": [
+                                            "None",
+                                            "BottomOnly",
+                                            "TopOnly",
+                                            "LeftOnly",
+                                            "RightOnly",
+                                            "TopBottom",
+                                            "LeftRight",
+                                            "Frame"
+                                        ],
+                                        "title": "Outline"
+                                    },
+                                    "outlineStyle": {
+                                        "type": "integer",
+                                        "title": "Outline"
+                                    },
+                                    "textSize": {
+                                        "type": "number",
+                                        "title": "Text size"
+                                    },
+                                    "bold": {
+                                        "type": "boolean",
+                                        "title": "Bold"
+                                    },
+                                    "italic": {
+                                        "type": "boolean",
+                                        "title": "Italic"
+                                    },
+                                    "underline": {
+                                        "type": "boolean",
+                                        "title": "Underline"
+                                    },
+                                    "fontFamily": {
+                                        "type": "string",
+                                        "title": "Font family"
+                                    },
+                                    "expandCollapseToggleType": {
+                                        "type": "integer",
+                                        "enum": [
+                                            0,
+                                            1,
+                                            2
+                                        ],
+                                        "title": "Expand/collapse icon"
+                                    },
+                                    "steppedLayoutIndentation": {
+                                        "type": "number",
+                                        "title": "Stepped layout indentation"
+                                    },
+                                    "padding": {
+                                        "type": "number",
+                                        "title": "Padding"
+                                    },
+                                    "accessibilityContrastProperties": {
+                                        "type": "boolean"
+                                    }
+                                }
+                            },
+                            "title": "Items"
+                        },
+                        "date": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "fontColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Font color"
+                                    },
+                                    "textSize": {
+                                        "type": "number",
+                                        "title": "Text size"
+                                    },
+                                    "bold": {
+                                        "type": "boolean",
+                                        "title": "Bold"
+                                    },
+                                    "italic": {
+                                        "type": "boolean",
+                                        "title": "Italic"
+                                    },
+                                    "underline": {
+                                        "type": "boolean",
+                                        "title": "Underline"
+                                    },
+                                    "fontFamily": {
+                                        "type": "string",
+                                        "title": "Font family"
+                                    },
+                                    "background": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Background color"
+                                    },
+                                    "hideDatePickerButton": {
+                                        "type": "boolean"
+                                    }
+                                }
+                            },
+                            "title": "Date inputs"
+                        },
+                        "numericInputStyle": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "fontColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Font color"
+                                    },
+                                    "textSize": {
+                                        "type": "number",
+                                        "title": "Text size"
+                                    },
+                                    "bold": {
+                                        "type": "boolean",
+                                        "title": "Bold"
+                                    },
+                                    "italic": {
+                                        "type": "boolean",
+                                        "title": "Italic"
+                                    },
+                                    "underline": {
+                                        "type": "boolean",
+                                        "title": "Underline"
+                                    },
+                                    "fontFamily": {
+                                        "type": "string",
+                                        "title": "Font family"
+                                    },
+                                    "background": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Background color"
+                                    }
+                                }
+                            },
+                            "title": "Numeric inputs"
+                        },
+                        "slider": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "show": {
+                                        "type": "boolean",
+                                        "title": "Show"
+                                    },
+                                    "color": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Color"
+                                    },
+                                    "handleFillColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Fill"
+                                    },
+                                    "handleBorderColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Border"
+                                    },
+                                    "secondaryLineColor": {
+                                        "$ref": "#/definitions/fill",
+                                        "title": "Color"
+                                    }
+                                }
+                            },
+                            "title": "Slider"
+                        },
+                        "dateRange": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "includeToday": {
+                                        "type": "boolean",
+                                        "title": "Include today"
+                                    },
+                                    "anchorDate": {
+                                        "type": "string",
+                                        "title": "Anchor date",
+                                        "description": "Select a date to reference when filtering visuals by a relative range of time. If an anchor date isn't specified, we'll use the current date."
+                                    }
+                                }
+                            },
+                            "title": "Date Range"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

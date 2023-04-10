@@ -1,0 +1,410 @@
+﻿{
+    "name": "Neumorphic Theme",
+    "visualStyles": {
+        "*": {
+            "*": {
+                "title": [
+                    {
+                        "bold": true
+                    }
+                ],
+                "background": [
+                    {
+                        "comment": "各ビジュアルの背景",
+                        "color": {
+                            "solid": {
+                                "color": "#00000000"
+                            }
+                        }
+                    }
+                ],
+                "border": [
+                    {
+                        "comment": "全般 > 効果 > 背景",
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "radius": 20
+                    }
+                ],
+                "dropShadow": [
+                    {
+                        "comment": "全般 > 効果 > 影",
+                        "show": true,
+                        "position": "Outer",
+                        "preset": "Custom",
+                        "shadowSpread": 0,
+                        "shadowBlur": 10,
+                        "angle": 45,
+                        "shadowDistance": 10,
+                        "transparency": 50,
+                        "color": {
+                            "solid": {
+                                "color": "#A3B1C6"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "page": {
+            "*": {
+                "background": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#EBEBEB"
+                            }
+                        },
+                        "transparency": 100
+                    }
+                ],
+                "outspace": [
+                    {
+                        "color": {
+                            "solid": {
+                                "color": "#EBEBEB"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "slicer": {
+            "*": {
+                "header": [
+                    {
+                        "bold": true
+                    }
+                ],
+                "items": [
+                    {
+                        "comment": [
+                            "outline: 全般 > 値 > 罫線 > ex. 0:無 1:上 2:右 4:下 8:左",
+                            "色 #00000000 は透明を意味する"
+                        ],
+                        "outlineStyle": 0,
+                        "background": {
+                            "solid": {
+                                "color": "#EBEBEB"
+                            }
+                        }
+                    }
+                ],
+                "border": [
+                    {
+                        "comment": "全般 > 効果 > 背景",
+                        "show": true,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "radius": 20
+                    }
+                ],
+                "dropShadow": [
+                    {
+                        "comment": "全般 > 効果 > 影",
+                        "show": true,
+                        "position": "Inner",
+                        "preset": "Custom",
+                        "shadowSpread": 0,
+                        "shadowBlur": 10,
+                        "angle": 45,
+                        "shadowDistance": 10,
+                        "transparency": 50,
+                        "color": {
+                            "solid": {
+                                "color": "#A3B1C6"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "gauge": {
+            "*": {
+                "target": [
+                    {
+                        "fontSize": 12,
+                        "bold": true,
+                        "color": {
+                            "solid": {
+                                "color": "#E22D48"
+                            }
+                        }
+                    }                    
+                ],
+                "calloutValue": [
+                    {
+                        "fontSize": 20,
+                        "bold": true,
+                        "color": {
+                            "solid": {
+                                "color": "#0400FF"
+                            }
+                        }
+                    }
+                ]
+            }
+            
+        },
+        "shape": {
+            "*": {
+                "fill": [
+                    {
+                        "show": false
+                    }
+                ],
+                "outline": [
+                    {
+                        "show": false
+                    }
+                ],
+                "dropShadow": [
+                    {
+                        "comment": "全般 > 効果 > 影",
+                        "show": true,
+                        "position": "Inner",
+                        "preset": "Custom",
+                        "shadowSpread": 0,
+                        "shadowBlur": 10,
+                        "angle": 45,
+                        "shadowDistance": 10,
+                        "transparency": 50,
+                        "color": {
+                            "solid": {
+                                "color": "#A3B1C6"
+                            }
+                        }
+                    }
+                ]
+            }
+
+        },
+        "card": {
+            "*": {
+                "labels": [
+                    {
+                        "fontSize": 24,
+                        "color": {
+                            "solid": {
+                                "color": "#0400FF"
+                            }
+                        }
+                    }
+                ],
+                "categoryLabels": [
+                    {
+                        "fontSize": 20
+                    }
+                ]
+            }
+        },
+        "tableEx": {
+            "*": {
+                "grid": [
+                    {
+                        "gridVertical": true,
+                        "rowPadding": 3,
+                        "outlineColor": {
+                            "solid": {
+                                "color": "#15CAB6"
+                            }
+                        }
+                    }
+                ],
+                "columnHeaders": [
+                    {
+                        "backColor": {
+                            "solid": {
+                                "color": "#00000000"
+                            }
+                        }
+                    }
+
+                ],
+                "values": [
+                    {
+                        "backColorPrimary": {
+                            "solid": {
+                                "color": "#00000000"
+                            }
+
+                        },
+                        "backColorSecondary": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pivotTable": {
+            "*": {
+                "grid": [
+                    {
+                        "gridVertical": true,
+                        "rowPadding": 3,
+                        "outlineColor": {
+                            "solid": {
+                                "color": "#15CAB6"
+                            }
+                        }
+                    }
+                ],
+                "columnHeaders": [
+                    {
+                        "backColor": {
+                            "solid": {
+                                "color": "#00000000"
+                            }
+                        }
+                    }
+
+                ],
+                "values": [
+                    {
+                        "backColorPrimary": {
+                            "solid": {
+                                "color": "#00000000"
+                            }
+
+                        },
+                        "backColorSecondary": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "textbox": {
+            "*": {
+                "title": [
+                    {
+                        "fontSize": 20,
+                        "bold": true
+                    }
+                ],
+                "padding": [
+                    {
+                        "top": 10,
+                        "left": 20
+                    }
+                ],
+                "background": [
+                    {
+                        "comment": "テキストボックスの背景",
+                        "color": {
+                            "solid": {
+                                "color": "#00000000"
+                            }
+                        }
+                    }
+                ],
+                "border": [
+                    {
+                        "comment": "全般 > 効果 > 背景",
+                        "show": false,
+                        "color": {
+                            "solid": {
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "radius": 30
+                    }
+                ],
+                "dropShadow": [
+                    {
+                        "comment": "全般 > 効果 > 影",
+                        "show": false,
+                        "position": "Inner",
+                        "preset": "Custom",
+                        "shadowSpread": 0,
+                        "shadowBlur": 10,
+                        "angle": 45,
+                        "shadowDistance": 10,
+                        "transparency": 50,
+                        "color": {
+                            "solid": {
+                                "color": "#A3B1C6"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "dataColors": [
+        "#15CAB6",
+        "#007FFF",
+        "#F6B53D",
+        "#EF8A5A",
+        "#E85E76",
+        "#696CB5",
+        "#0F488C",
+        "#323447",
+        "#3599B8",
+        "#DFBFBF",
+        "#4AC5BB",
+        "#5F6B6D",
+        "#FB8281",
+        "#F4D25A",
+        "#7F898A",
+        "#A4DDEE",
+        "#FDAB89",
+        "#B687AC",
+        "#28738A",
+        "#A78F8F",
+        "#168980",
+        "#293537",
+        "#BB4A4A",
+        "#B59525",
+        "#475052",
+        "#6A9FB0",
+        "#BD7150",
+        "#7B4F71",
+        "#1B4D5C",
+        "#706060",
+        "#0F5C55",
+        "#1C2325"
+    ],
+    "textClasses": {
+        "label": {
+            "fontFace": "wf_standard-font, helvetica, arial, sans-serif",
+            "color": "#666666",
+            "fontSize": 9
+        },
+        "callout": {
+            "color": "#666666",
+            "fontSize": 9,
+            "fontFace": "'Segoe UI Bold', wf_segoe-ui_bold, helvetica, arial, sans-serif"
+        },
+        "title": {
+            "color": "#666666",
+            "fontFace": "'Segoe UI Bold', wf_segoe-ui_bold, helvetica, arial, sans-serif",
+            "fontSize": 10
+        },
+        "header": {
+            "color": "#666666",
+            "fontSize": 10,
+            "fontFace": "'Segoe UI Semibold', wf_segoe-ui_semibold, helvetica, arial, sans-serif"
+        }
+    },
+    "bad": "#E22D48",
+    "neutral": "#CCCCCC",
+    "good": "#15CAB6",
+    "minimum": "#E22D48",
+    "center": "#CCCCCC",
+    "maximum": "#15CAB6",
+    "foreground": "#323447",
+    "background": "#F8FAFC",
+    "foregroundNeutralSecondary": "#666666"
+}
